@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4003
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+require("./src/routes/product.route")(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
