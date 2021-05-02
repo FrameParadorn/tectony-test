@@ -8,5 +8,6 @@ db.mongoose = mongoose;
 db.host = dbConfig.host;
 
 db.product = require("./product.model");
+db.user = require("./user.model");
 
 module.exports = db;
