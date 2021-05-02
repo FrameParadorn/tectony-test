@@ -1,5 +1,5 @@
-import styles from '../styles/Home.module.css'
 import ProductSlideImage from '../components/product-slide-image'
+import ProductContent from '../components/product-content'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
           <ProductSlideImage />
         </div>
         <div className="col-6">
-          HEPA Circulation Unit
+          <ProductContent />
         </div>
       </div>
     </div>
