@@ -1,6 +1,7 @@
 import ProductSlideImage from '../components/product-slide-image'
 import ProductContent from '../components/product-content'
 import ProductDescirption from '../components/product-description'
+import ProductRelated from '../components/product-related'
 
 export default function Home() {
   return (
@@ -16,6 +17,11 @@ export default function Home() {
       <div className="row">
         <div className="col-12">
           <ProductDescirption />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <ProductRelated />
         </div>
       </div>
     </div>
