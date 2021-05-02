@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/navbar/navbar';
 import '../styles/globals.css';
+import 'swiper/swiper-bundle.css';
 
 function MyApp({Component, pageProps}) {
   return (
