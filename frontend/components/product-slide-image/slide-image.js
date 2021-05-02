@@ -6,7 +6,7 @@ function index({images, onSetImageIndicator}) {
     <div className="mt-2">
       <Swiper spaceBetween={10} slidesPerView={4} scrollbar={{draggable: true}}>
         {images.map((image, index) => (
-          <SwiperSlide onClick={() => onSetImageIndicator(index)} key={index}>
+          <SwiperSlide onMouseOver={() => onSetImageIndicator(index)} key={index}>
             <img src={image} alt="nike" className="slide-image-item" />
           </SwiperSlide>
         ))}
@@ -17,6 +17,11 @@ function index({images, onSetImageIndicator}) {
             width: 100%;
             cursor: pointer;
           }
+
+          .slide-image-item:hover {
+            border: 3px solid red;
+          }
+          
         `}
       </style>
     </div>

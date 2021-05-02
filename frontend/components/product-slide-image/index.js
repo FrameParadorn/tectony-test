@@ -5,11 +5,11 @@ import SlideImage from './slide-image'
 function index({  }) {
 
   const images = [
-    "https://source.unsplash.com/l8p1aWZqHvE/1600x900",
-    "https://source.unsplash.com/164_6wVEHfI/1600x900",
-    "https://source.unsplash.com/ZjViL8qxihM/1600x900",
-    "https://source.unsplash.com/DMl5gG0yWWY/1600x900",
-    "https://source.unsplash.com/ytpT9C8fuGI/1600x900"
+    "https://source.unsplash.com/l8p1aWZqHvE/640x427",
+    "https://source.unsplash.com/164_6wVEHfI/640x427",
+    "https://source.unsplash.com/ZjViL8qxihM/640x427",
+    "https://source.unsplash.com/DMl5gG0yWWY/640x427",
+    "https://source.unsplash.com/ytpT9C8fuGI/640x427"
   ] 
 
     
