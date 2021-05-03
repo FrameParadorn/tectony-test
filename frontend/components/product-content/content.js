@@ -2,14 +2,19 @@ import React from 'react';
 import StarRatings from 'react-star-ratings';
 import NumberFormat from 'react-number-format';
 
-function content({}) {
+import { connect } from 'react-redux'
+
+function content({product}) {
+
+  if (!product) return <div>Loading...</div>;
+
   return (
     <div className="box-content">
-      <h1>Nike Air Max</h1>
-      <StarRatings rating={5} starRatedColor="#ca9909" starDimension="25" starSpacing="2px" numberOfStars={5} name="rating" />
+      <h1>{ product.name }</h1>
+      <StarRatings rating={product.rate} starRatedColor="#ca9909" starDimension="25" starSpacing="2px" numberOfStars={5} name="rating" />
 
       <h2 className="mt-5">
-        <NumberFormat value={245698} displayType={'text'} thousandSeparator={true} suffix={" บาท"}/>
+        <NumberFormat value={product.price} displayType={'text'} thousandSeparator={true} suffix={" บาท"}/>
       </h2>
 
       <style jsx>
@@ -23,4 +28,8 @@ function content({}) {
   );
 }
 
-export default content;
+const mapStateToProps = (state) => ({
+  product: state.product.product || {},
+});
+
+export default connect(mapStateToProps)(content);

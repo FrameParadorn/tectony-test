@@ -2,17 +2,17 @@ import React from 'react';
 import Avatar from 'react-avatar';
 import StarRatings from 'react-star-ratings';
 
-function reviewItem({}) {
+function reviewItem({review}) {
   return (
     <div className="card">
       <div className="card-body">
         <div className="row">
           <div className="col-12">
             <div className="row">
-              <Avatar name="Foo Bar" round="50%" size="50" />
-              <span>Name Lastname</span>
+              <Avatar name={review.name} round="50%" size="50" />
+              <span>{review.name}</span>
               <StarRatings 
-                rating={5} 
+                rating={review.rate} 
                 starRatedColor="rgb(202, 153, 9)" 
                 numberOfStars={5} name="rating" 
                 starDimension="20" 
@@ -20,7 +20,7 @@ function reviewItem({}) {
               />
             </div>
           </div>
-          <div className="col-12">This is some text within a card body.</div>
+          <div className="col-12">{ review.detail }</div>
         </div>
       </div>
 

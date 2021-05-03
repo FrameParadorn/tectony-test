@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 import { toggleCart } from '../../redux/actions/cart.actions'
 
 
-
 function Desktop({dispatch, menus}) {
 
   const showCart = () => {

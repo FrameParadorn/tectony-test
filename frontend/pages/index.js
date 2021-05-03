@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import ProductSlideImage from '../components/product-slide-image';
 import ProductContent from '../components/product-content';
 import ProductDescirption from '../components/product-description';
@@ -5,9 +6,16 @@ import ProductRelated from '../components/product-related';
 import Cart from '../components/cart'
 
 import { connect } from 'react-redux'
+import { loadProductOne } from '../redux/actions/product.action'
 
 
-function Home({ cartOpen }) {
+function Home({ dispatch, cartOpen }) {
+
+  useEffect(async () => {
+    const productId = "608dad3f519257774007d693" 
+    dispatch(await loadProductOne(productId)) 
+  }, [])
+
   return (
     <>
       <div className="container">

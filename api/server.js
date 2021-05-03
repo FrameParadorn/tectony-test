@@ -1,7 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require("cors");
 const app = express();
 const port = 4003;
+
+
+var corsOptions = {
+  origin: "http://localhost:4004"
+};
+
+app.use(cors());
 
 const db = require('./src/models');
 db.mongoose
