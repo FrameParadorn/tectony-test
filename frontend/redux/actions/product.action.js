@@ -10,8 +10,18 @@ export const loadProductOne = async (id) => {
   } catch (error) {
     console.error(error);
   }
-  return {
-    type: 'LOAD_PRODUCT_ONE',
-    payload: {},
-  };
+};
+
+
+
+export const loadProductRelated = async (id) => {
+  try {
+    const response = await axios.get(`/api/product/${id}/related`);
+    return {
+      type: 'LOAD_PRODUCT_RELATED',
+      payload: response.data,
+    };
+  } catch (error) {
+    console.error(error);
+  }
 };
