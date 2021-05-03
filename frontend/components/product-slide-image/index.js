@@ -7,8 +7,6 @@ import {connect} from 'react-redux';
 function index({product}) {
   const [imageIndicator, setImageIndicator] = useState(0);
 
-  console.log(product)
-
   if (!product || !product.images) return <div>Loading...</div>;
 
   const { images } = product

@@ -7,14 +7,15 @@ import Cart from '../components/cart'
 
 import { connect } from 'react-redux'
 import { loadProductOne, loadProductRelated } from '../redux/actions/product.action'
+import {wrapper} from '../redux/store';
 
 
 function Home({ dispatch, cartOpen }) {
 
   useEffect(async () => {
     const productId = "608dad3f519257774007d693" 
-    dispatch(await loadProductOne(productId)) 
-    dispatch(await loadProductRelated(productId)) 
+    dispatch(await loadProductOne(productId))
+    dispatch(await loadProductRelated(productId))
   }, [])
 
   return (
@@ -50,6 +51,7 @@ function Home({ dispatch, cartOpen }) {
 const mapStateToProps = state => ({
   cartOpen: state.cart.cartOpen
 })
+
 
 
 export default connect(mapStateToProps)(Home)

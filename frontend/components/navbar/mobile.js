@@ -37,7 +37,7 @@ function mobile({menus}) {
             ))}
             <li className="nav-item">
               <Link href="/">
-                <a>Cart <span class="badge bg-primary">0</span></a>
+                <a>Cart <span className="badge bg-primary">0</span></a>
               </Link>
             </li>
             <li className="nav-item">
