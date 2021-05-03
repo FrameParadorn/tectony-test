@@ -4,7 +4,10 @@ import ProductDescirption from '../components/product-description';
 import ProductRelated from '../components/product-related';
 import Cart from '../components/cart'
 
-export default function Home() {
+import { connect } from 'react-redux'
+
+
+function Home({ cartOpen }) {
   return (
     <>
       <div className="container">
@@ -28,8 +31,16 @@ export default function Home() {
         </div>
       </div>
         
-      <Cart />
+      {cartOpen ? <Cart /> : null}
       
     </>
   );
 }
+
+
+const mapStateToProps = state => ({
+  cartOpen: state.cart.cartOpen
+})
+
+
+export default connect(mapStateToProps)(Home)

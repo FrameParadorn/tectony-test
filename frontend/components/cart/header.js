@@ -2,12 +2,18 @@ import {HiOutlineShoppingBag} from 'react-icons/hi';
 import {FaRegHeart, FaTimes} from 'react-icons/fa';
 import {RiUserFill} from 'react-icons/ri';
 
-function Header({}) {
+import { connect } from 'react-redux'
+import { toggleCart } from '../../redux/actions/cart.actions'
+
+function Header({ dispatch, cartOpen }) {
+
   return (
     <>
       <div className="row">
         <div className="col-6">
-          <div className="icon x-icon">
+          <div className="icon x-icon" onClick={ () => {
+            dispatch(toggleCart())
+          }}>
             <FaTimes />
           </div>
         </div>
@@ -36,4 +42,12 @@ function Header({}) {
   );
 }
 
-export default Header;
+
+const mapStateToProps = state => ({
+  cartOpen: state.cart.cartOpen
+})
+
+
+
+
+export default connect(mapStateToProps)(Header);

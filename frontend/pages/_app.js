@@ -3,6 +3,7 @@ import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer'
 import '../styles/globals.css';
 import 'swiper/swiper-bundle.css';
+import {wrapper} from '../redux/store'
 
 function MyApp({Component, pageProps}) {
   return (
@@ -33,4 +34,4 @@ function MyApp({Component, pageProps}) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

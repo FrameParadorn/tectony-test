@@ -4,7 +4,17 @@ import {HiOutlineShoppingBag} from 'react-icons/hi';
 import {FaRegHeart} from 'react-icons/fa';
 import {RiUserFill} from 'react-icons/ri';
 
-function Desktop({menus}) {
+import { connect } from 'react-redux'
+import { toggleCart } from '../../redux/actions/cart.actions'
+
+
+
+function Desktop({dispatch, menus}) {
+
+  const showCart = () => {
+    dispatch(toggleCart())  
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light d-none d-lg-block">
       <div className="container">
@@ -41,7 +51,7 @@ function Desktop({menus}) {
         </div>
         <div className="col-2 d-flex justify-content-center nav-icon">
           <div className="icon">
-            <HiOutlineShoppingBag />
+            <HiOutlineShoppingBag onClick={showCart}/>
           </div>
           <div className="icon">
             <FaRegHeart />
@@ -99,4 +109,4 @@ function Desktop({menus}) {
   );
 }
 
-export default Desktop;
+export default connect()(Desktop);
