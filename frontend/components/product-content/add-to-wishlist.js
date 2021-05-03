@@ -2,7 +2,7 @@ import Content from "./content"
 import AddToCart from "./add-to-cart"
 import { AiOutlineHeart } from 'react-icons/ai'
 
-export default function () {
+export default function AddToWishlist() {
   return (
     <div className="mt-2">
       <button className="btn-to-wishlist">

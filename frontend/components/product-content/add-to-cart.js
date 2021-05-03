@@ -1,4 +1,4 @@
-export default function () {
+export default function AddToCart() {
   return (
     <div className="mt-5">
       <input type="number" className="input-qty text-center" defaultValue="1" />
